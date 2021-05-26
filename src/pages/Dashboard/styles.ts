@@ -1,13 +1,13 @@
 import styled from 'styled-components'
 
-import Colors from '../../utlitarios/colors'
+import colors from '../../utlitarios/color'
 
 export const Container = styled.div`
 
 `
 export const Header = styled.header`
    padding: 32px 0;
-   background: ${Colors.backgroudDashboard}
+   background: ${colors.background}
 `
 
 export const HeaderContent = styled.div`
@@ -26,7 +26,7 @@ export const HeaderContent = styled.div`
       border: 0;
 
       svg {
-         color: ${Colors.corButtonLogon};
+         color: ${colors.buttonPadrao};
          width: 25px;
          height: 25px;
       }
@@ -51,11 +51,11 @@ export const Profile = styled.div`
       line-height: 24px;
 
       span {
-         color: ${Colors.headerSpan}
+         color: ${colors.lineInWhite}
       }
 
       strong {
-         color: ${Colors.headerStrong}
+         color: ${colors.primary}
       }
    }
 `

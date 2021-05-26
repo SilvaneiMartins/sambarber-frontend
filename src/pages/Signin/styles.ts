@@ -1,8 +1,8 @@
 import styled, { keyframes } from 'styled-components'
 import { shade } from 'polished'
 
-import signinBackgoundImg from '../../assets/sign-in-background.png'
-import Colors from '../../utlitarios/colors'
+import signinBackgoundImg from '../../assets/img/signInBackground.png'
+import colors from '../../utlitarios/color'
 
 const appearFromLeft = keyframes`
    from {
@@ -36,6 +36,11 @@ export const AnimatedContainer = styled.div`
    align-items: center;
    justify-content: center;
 
+   img {
+        width: 10rem;
+        height: 10rem;
+    }
+
    animation: ${appearFromLeft} 1s;
 
    form {
@@ -48,20 +53,20 @@ export const AnimatedContainer = styled.div`
       }
 
       a {
-         color: ${Colors.esqueceuSenha};
+         color: ${colors.textBase};
          display: block;
          margin-top: 10px;
          text-decoration: none;
          transition: color 0.2s;
 
          &:hover {
-            color: ${shade(0.2, Colors.esqueceuSenha)};
+            color: ${shade(0.3, colors.textBase)};
          }
       }
    }
 
    > a {
-      color: ${Colors.criarconta};
+      color: ${colors.linksButton};
       display: block;
       margin-top: 10px;
       text-decoration: none;
@@ -76,13 +81,13 @@ export const AnimatedContainer = styled.div`
       }
 
       &:hover {
-         color: ${shade(0.2, Colors.criarconta)};
+         color: ${shade(0.2, colors.linksButton)};
       }
    }
 `
 
 export const Background = styled.div`
-   flex: 1;
-   background: url(${signinBackgoundImg}) no-repeat center;
-   background-size: cover;
+    flex: 1;
+    background: url(${signinBackgoundImg}) no-repeat center;
+    background-size: cover;
 `

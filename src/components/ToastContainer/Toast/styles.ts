@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components'
 import { animated } from 'react-spring'
 
-import Colors from '../../../utlitarios/colors'
+import colors from '../../../utlitarios/color'
 
 interface ContainerProps {
    type?: 'sucess' | 'error' | 'info'
@@ -10,16 +10,16 @@ interface ContainerProps {
 
 const toastTypeVariations = {
    info: css`
-      background: ${Colors.backgroundToast};
-      color: ${Colors.textToast};
+      background: ${colors.backgroundToast};
+      color: ${colors.textToast};
    `,
    sucess: css`
-      background: ${Colors.backgroundToastPropsSucces};
-      color: ${Colors.textToastPropsSucces};
+      background: ${colors.backgroundToastPropsSucces};
+      color: ${colors.textToastPropsSucces};
    `,
    error: css`
-      background: ${Colors.backgroundToastPropsError};
-      color: ${Colors.textToastPropsError};
+      background: ${colors.backgroundToastPropsError};
+      color: ${colors.textToastPropsError};
    `
 }
 

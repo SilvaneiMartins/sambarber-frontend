@@ -1,9 +1,10 @@
 import React, { useCallback, useRef, useState } from 'react'
-import { FiLogIn, FiMail } from 'react-icons/fi'
+import { FiMail } from 'react-icons/fi'
+// import { FiLogIn, FiMail } from 'react-icons/fi'
 import { Form } from '@unform/web'
 import { FormHandles } from '@unform/core'
 import * as Yup from 'yup'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 
 import {
    Container,
@@ -12,7 +13,7 @@ import {
    AnimatedContainer,
 } from './styles'
 import { useToast } from '../../hooks/Toast'
-import logoImg from '../../assets/logo.svg'
+import logoImg from '../../assets/logo/logoR.png'
 import Input from '../../components/Input'
 import Button from '../../components/Button'
 import getValidationErrors from '../../utlitarios/getValidationsErros'
@@ -84,7 +85,7 @@ const ForgotPasswod: React.FC = () => {
 
                <img
                   src={logoImg}
-                  alt='GoBarber'
+                  alt='Rondosoft'
                />
 
                <Form ref={formRef} onSubmit={handleSubimit} >
@@ -105,10 +106,10 @@ const ForgotPasswod: React.FC = () => {
 
                </Form>
 
-               <Link to='/' >
+               {/* <Link to='/' >
                   <FiLogIn size={16} />
 				      Voltar ao Login
-			      </Link>
+                </Link> */}
 
             </AnimatedContainer>
          </Content>

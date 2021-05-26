@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components'
 
-import Colors from '../utlitarios/colors'
+import colors from '../utlitarios/color'
 
 export default createGlobalStyle`
    *{
@@ -11,8 +11,8 @@ export default createGlobalStyle`
    }
 
    body {
-      background: ${Colors.background};
-      color: ${Colors.colorText};
+      background: ${colors.background};
+      color: ${colors.textBackground};
       -webkit-font-smoothing: antialiased;
    }
 

@@ -1,37 +1,61 @@
-import React from 'react'
+import React from "react";
 import {
-   Route as ReactDomRoute,
-   RouteProps as ReactDomRouteProps,
-   Redirect,
-} from 'react-router-dom'
+    Route as ReactDomRoute,
+    RouteProps as ReactDomRouteProps,
+    Redirect,
+} from "react-router-dom";
 
-import { useAuth } from '../hooks/Auth'
+import { useAuth } from "../hooks/Auth";
 
 interface RouteProps extends ReactDomRouteProps {
-   isPrivate?: boolean
-   component: React.ComponentType
+    isPrivate?: boolean;
+    component: React.ComponentType;
 }
 
-const Route: React.FC<RouteProps> = ({ isPrivate = false, component: Component, ...rest }) => {
-   const { user } = useAuth()
+const Route: React.FC<RouteProps> = ({
+    isPrivate = false,
+    component: Component,
+    ...rest
+}) => {
+    const { user } = useAuth();
 
-   return (
-      <ReactDomRoute
-         {...rest}
-         render={({ location }) => {
-            return isPrivate === !!user ? (
-               <Component />
-            ) : (
-                  <Redirect
-                     to={{
-                        pathname: isPrivate ? '/' : '/dashboard',
-                        state: { from: location },
-                     }}
-                  />
-               )
-         }}
-      />
-   )
-}
+    return (
+        <ReactDomRoute
+            {...rest}
+            render={({ location }) => {
+                return isPrivate === !!user ? (
+                    <Component />
+                ) : (
+                    <>
+                        <Redirect
+                            to={{
+                                pathname: isPrivate ? "/" : "/dashboard",
+                                state: { from: location },
+                            }}
+                        />,
+                        <Redirect
+                            to={{
+                                pathname: isPrivate ? "/" : "/signup",
+                                state: { from: location },
+                            }}
+                        />,
+                        <Redirect
+                            to={{
+                                pathname: isPrivate ? "/" : "/forgot-password",
+                                state: { from: location },
+                            }}
+                        />,
+                        <Redirect
+                            to={{
+                                pathname: isPrivate ? "/" : "/reset-password",
+                                state: { from: location },
+                            }}
+                        />
+                    </>
+                );
+            }}
+        />
+    );
+};
 
-export default Route
+export default Route;

@@ -1,7 +1,7 @@
 import styled, { keyframes } from 'styled-components'
 import { shade } from 'polished'
 
-import signupBackgoundImg from '../../assets/sign-up-background.png'
+import signupBackgoundImg from '../../assets/img/signUpBackground.png'
 import Colors from '../../utlitarios/colors'
 
 const appearFromRight = keyframes`
@@ -34,6 +34,11 @@ export const AnimatedContainer = styled.div`
    flex-direction: column;
    align-items: center;
    justify-content: center;
+
+   img {
+        width: 10rem;
+        height: 10rem;
+    }
 
    animation: ${appearFromRight} 1s;
 

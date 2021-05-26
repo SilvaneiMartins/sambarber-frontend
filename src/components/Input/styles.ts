@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components'
 
-import Colors from '../../utlitarios/colors'
+import colors from '../../utlitarios/color'
 import Tooltip from '../../components/Tooltip'
 
 interface ContainerProps {
@@ -10,13 +10,13 @@ interface ContainerProps {
 }
 
 export const Container = styled.div<ContainerProps>`
-   background: ${Colors.backgroundInput};
+   background: ${colors.inputBackground};
    border-radius: 10px;
    padding: 13px;
    width: 100%;
 
-   border: 2px solid ${Colors.borderInput};
-   color: ${Colors.placeholder};
+   border: 2px solid ${colors.borderInput3};
+   color: ${colors.textComplement};
 
    display: flex;
    align-items: center;
@@ -26,27 +26,27 @@ export const Container = styled.div<ContainerProps>`
    }
 
    ${props => props.isErrored && css`
-      border-color: ${Colors.borderColorInputError};
+      border-color: ${colors.borderColorInputError};
    `}
 
    ${props => props.isFocused && css`
-      color: ${Colors.borderColorInputCadastro};
-      border-color: ${Colors.borderColorInputCadastro};
+      color: ${colors.borderColorInputCadastro};
+      border-color: ${colors.borderColorInputCadastro};
    `}
 
    ${props => props.isField && css`
-      color: ${Colors.borderColorInputCadastro};
-      /* border-color: ${Colors.borderColorInputCadastro}; */
+      color: ${colors.borderColorInputCadastro};
+      /* border-color: ${colors.borderColorInputCadastro}; */
    `}
 
    input {
       flex: 1;
       border: 0;
       background: transparent;
-      color: ${Colors.colorText};
+      color: ${colors.textBase};
 
       &::placeholder {
-         color: ${Colors.placeholder};
+         color: ${colors.textComplement};
       }
    }
 
@@ -64,11 +64,11 @@ export const Error = styled(Tooltip)`
    }
 
    span {
-      background: ${Colors.inputSpanBackground};
-      color: ${Colors.white};
+      background: ${colors.inputSpanBackground};
+      color: ${colors.boxBase};
 
       &::before {
-         border-color: ${Colors.inputSpanBackground} transparent;
+         border-color: ${colors.inputSpanBackground} transparent;
       }
    }
 

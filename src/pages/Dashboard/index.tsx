@@ -2,7 +2,7 @@ import React from 'react'
 import { FiPower } from 'react-icons/fi'
 
 import { useAuth } from '../../hooks/Auth'
-import logoImg from '../../assets/logo.svg'
+import logoImg from '../../assets/logo/logoR.png'
 
 import {
    Container,
@@ -20,7 +20,7 @@ const Dashboard: React.FC = () => {
             <HeaderContent>
                <img
                   src={logoImg}
-                  alt='SamBarber'
+                  alt='Rondosoft'
                />
 
                <Profile>

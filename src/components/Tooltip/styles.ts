@@ -1,13 +1,13 @@
 import styled from 'styled-components'
 
-import Colors from '../../utlitarios/colors'
+import colors from '../../utlitarios/color'
 
 export const Container = styled.div`
    position: relative;
 
    span {
       width: 180px;
-      background: ${Colors.spanToolTip};
+      background: ${colors.spanToolTip};
       padding: 8px;
       border-radius: 4px;
       font-size: 14px;
@@ -21,12 +21,12 @@ export const Container = styled.div`
       left: 50%;
       transform: translateX(-50%);
 
-      color: ${Colors.spanToolTipText};
+      color: ${colors.spanToolTipText};
 
       &::before {
          content: '';
          border-style: solid;
-         border-color: ${Colors.spanToolBefore} transparent;
+         border-color: ${colors.spanToolBefore} transparent;
          border-width: 6px 6px 0px 6px;
          /* bottom: 20px; */
          top: 100%;
